@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Create Event</title>
     <style>
-        /* Base Styles */
+       
         body {
             font-family: Arial, sans-serif;
             background: #fff3e6;
@@ -125,7 +125,7 @@
     <label for="eLocation">Event Location</label>
     <input type="text" id="eLocation" name="eLocation" required>
 
-    <label for="eDesc">Event Description</label>
+    <label for="eDesc">Event Note</label>
     <textarea id="eDesc" name="eDesc" required></textarea>
 
     <button type="submit" class="btn">Add Event</button>

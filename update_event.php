@@ -7,12 +7,29 @@ $eDate = $_POST['eDate'];
 $eLocation = $_POST["eLocation"];
 $eDesc = $_POST["eDesc"];
 
-$sql = "UPDATE events SET eName='$eName', eDate='$eDate', eLocation='$eLocation', eDesc='$eDesc' WHERE eID=$eID";
-if ($conn->query($sql) === TRUE) {  
+
+$stmt = $conn->prepare(
+  "UPDATE events 
+   SET eName = ?, eDate = ?, eLocation = ?, eDesc = ?
+   WHERE eID = ?"
+);
+
+$stmt->bind_param(
+  "ssssi",
+  $_POST['eName'],
+  $_POST['eDate'],
+  $_POST['eLocation'],
+  $_POST['eDesc'],
+  $_POST['eID']
+);
+
+if ($stmt->execute()) {
     header("Location: index.php");
     exit();
-} 
-else {
-    echo "Error udpating information." . $sql . "<br>" . $conn->error;
+} else {
+    echo "Update failed: " . $stmt->error;
 }
+
+$stmt->close();
 $conn->close();
+?>

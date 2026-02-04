@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <title>Restore Event</title>
 
 <style>
-/* ===== Base ===== */
+
 body {
     font-family: Arial, sans-serif;
     background: #fff;
@@ -39,7 +39,6 @@ body {
     color: #222;
 }
 
-/* ===== Header ===== */
 .header {
     background: linear-gradient(135deg, #FF6B35, #D7263D);
     padding: 20px;
@@ -60,7 +59,6 @@ body {
     font-size: 1.6rem;
 }
 
-/* ===== Card ===== */
 .card {
     max-width: 500px;
     margin: 60px auto;
@@ -76,7 +74,6 @@ body {
     margin-bottom: 25px;
 }
 
-/* ===== Buttons ===== */
 .btn {
     padding: 10px 20px;
     border: none;
@@ -104,7 +101,6 @@ body {
     background: #ccc;
 }
 
-/* ===== Modal ===== */
 .modal {
     display: none;
     position: fixed;
@@ -137,13 +133,11 @@ body {
 
 <body>
 
-<!-- Header -->
 <div class="header">
     <a href="index.php">🏠</a>
     <h1>Restore Event</h1>
 </div>
 
-<!-- Restore Card -->
 <div class="card">
     <p>Do you want to restore this event back to the list?</p>
 
@@ -153,7 +147,6 @@ body {
     </a>
 </div>
 
-<!-- Confirmation Modal -->
 <div class="modal" id="confirmModal">
     <div class="modal-content">
         <h2>Confirm Restore</h2>

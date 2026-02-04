@@ -8,16 +8,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $eLocation = $_POST['eLocation'];
     $eDesc     = $_POST['eDesc'];
 
-    // ✅ Proper prepared statement
     $sql = $conn->prepare(
         "INSERT INTO events (eName, eDate, eLocation, eDesc)
          VALUES (?, ?, ?, ?)"
     );
 
-    // ✅ Bind parameters
     $sql->bind_param("ssss", $eName, $eDate, $eLocation, $eDesc);
 
-    // ✅ Execute
     if ($sql->execute()) {
         header("Location: index.php");
         exit();

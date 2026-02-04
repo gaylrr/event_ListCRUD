@@ -37,14 +37,19 @@ $result = $conn->query($sql);
 <meta charset="UTF-8">
 <title>Event System</title>
 <style>
-    /* Base Styles */
     body {
         font-family: Arial, sans-serif;
-        background-color: #fff;
+        background: #fff3e6;
         margin: 0;
         padding: 20px;
         color: #222;
     }
+
+    .header {
+         text-align: center;
+        margin-bottom: 30px;
+        }
+
 
     h1 {
         text-align: center;
@@ -91,7 +96,6 @@ $result = $conn->query($sql);
         background-color: #D7263D; 
     }
 
-    /* Postcard Grid */
     .postcard-container {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -100,7 +104,6 @@ $result = $conn->query($sql);
         max-width: 1200px;
     }
 
-    /* Event Postcard */
     .postcard {
         background: linear-gradient(135deg, #FF6B35, #D7263D);
         border-radius: 15px;
@@ -208,7 +211,6 @@ $result = $conn->query($sql);
 </style>
 </head>
 <body>
-
 <h1>Event List</h1>
 <div class="btn-center">
     <a href="create_event.php" class="btn-create">New Event</a>

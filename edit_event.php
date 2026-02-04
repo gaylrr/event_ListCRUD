@@ -29,8 +29,6 @@ if ($result->num_rows === 1) {
 
 <body>
     <style>
-        <style>
-    /* Base */
     body {
         font-family: Arial, sans-serif;
         background: #fff3e6;
@@ -168,8 +166,8 @@ if ($result->num_rows === 1) {
     <label>Event Location:</label>
     <input type="text" name="eLocation" value="<?= htmlspecialchars($row['eLocation']); ?>" required>
 
-    <label>Event Description:</label>
-    <textarea name="eDesc" required><?= htmlspecialchars($row['eDesc']); ?></textarea>
+    <label for="eDesc">Event Note</label>
+    <textarea id="eDesc" name="eDesc"><?= htmlspecialchars($row['eDesc']); ?></textarea>
 
     <input type="submit" value="Update Event" class="btn">
 </form>
